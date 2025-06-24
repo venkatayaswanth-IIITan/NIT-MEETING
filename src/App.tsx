@@ -124,28 +124,29 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-pink-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-md mx-auto">
-          <div className="flex items-center justify-between p-4">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
-              NITT
-            </h1>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setShowNotifications(true)}
-                className="relative p-3 text-gray-600 hover:text-blue-600 transition-colors rounded-full hover:bg-blue-50"
-              >
-                <Bell className="w-6 h-6" />
-                {unreadNotifications.length > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-gradient-to-r from-pink-500 to-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold shadow-lg">
-                    {unreadNotifications.length}
-                  </span>
-                )}
-              </button>
-            </div>
+  <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-pink-50">
+    {/* Header */}
+    <div className="bg-white shadow-sm border-b border-gray-100">
+      <div className="max-w-md mx-auto">
+        <div className="flex items-center justify-between p-2">
+          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
+            NITT
+          </h1>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowNotifications(true)}
+              className="relative p-2 text-gray-600 hover:text-blue-600 transition-colors rounded-full hover:bg-blue-50"
+            >
+              <Bell className="w-6 h-6" />
+              {unreadNotifications.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-pink-500 to-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold shadow-lg">
+                  {unreadNotifications.length}
+                </span>
+              )}
+            </button>
           </div>
+        </div>
+    
 
           {/* Action Buttons */}
           <div className="flex gap-2 p-4 pt-0">
